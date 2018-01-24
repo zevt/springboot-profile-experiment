@@ -68,10 +68,10 @@
 			<!--<activation>-->
 			<!--<activeByDefault>true</activeByDefault>-->
 			<!--</activation>-->
-
 			<properties>
 				<message>DEV message</message>
 			</properties>
+
 		</profile>
 		<profile>
 			<id>qa</id>
@@ -114,6 +114,25 @@
 				</executions>
 			</plugin>
 
+			<!--<plugin>-->
+				<!--<groupId>org.codehaus.mojo</groupId>-->
+				<!--<artifactId>properties-maven-plugin</artifactId>-->
+				<!--<version>1.0.0</version>-->
+				<!--<executions>-->
+					<!--<execution>-->
+						<!--<phase>initialize</phase>-->
+						<!--<goals>-->
+							<!--<goal>read-project-properties</goal>-->
+						<!--</goals>-->
+						<!--<configuration>-->
+							<!--<files>-->
+								<!--<file>${basedir}/src/main/resource/default.properties</file>-->
+							<!--</files>-->
+						<!--</configuration>-->
+					<!--</execution>-->
+				<!--</executions>-->
+			<!--</plugin>-->
+
 			<plugin>
 				<!-- Build an executable JAR -->
 				<groupId>org.apache.maven.plugins</groupId>
@@ -130,6 +149,7 @@
 					</archive>
 				</configuration>
 			</plugin>
+
 
 		</plugins>
 	</build>
